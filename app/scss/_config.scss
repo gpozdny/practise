@@ -1,6 +1,6 @@
 // USER VARIABLES SECTION
 
-$accent: orange; // Accent Color
+$accent: rgb(255, 0, 0); // Accent Color
 $fontsize: 16px; // Body Font Size
 $textcolor: #333; // Text Color
 $system: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
@@ -56,7 +56,8 @@ body {
 	font-size: $fontsize;
 	min-width: 320px;
 	position: relative;
-	line-height: 1.65;
+	line-height: 1.3;
 	overflow-x: hidden;
 	color: $textcolor;
+	background-color: rgb(156, 156, 156);
 }
