@@ -4,6 +4,10 @@
 @import 'sections/courses.scss';
 @import 'sections/footer.scss';
 @import 'sections/prices.scss';
+@import 'sections/login.scss';
+@import 'sections/popup-login-form';
+@import 'sections/students.scss';
+@import 'extras/statuses.scss';
 
 
 
@@ -14,6 +18,26 @@
 
 // CUSTOM USER STYLES & IMPORTS
 
+// ATTACHED FOOTer
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1 0 auto;
+  }
+  .footer {
+    flex-shrink: 0;
+  }
+  .header {
+    margin-top: auto;
+  }
+// MISC
 
 a {
     display: block;
@@ -29,60 +53,91 @@ img {
     padding: 0 5% 0 5%;
 }
 
-p,
-h1,
-h2,
-h3,
-h4 {
-    margin: 0;
-}
-
-h2 {
-    font-size: 16px;
-    margin: 0;
-    
-}
-
-ol,
-ul {
-    margin: 0;
-}
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 main,
 section {
     width: 100%;
 }
 
-// ATTACHED FOOTER
 
-html,
-body {
-    height: 100%;
-}
-
-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.header {
-    margin-top: auto;
-}
-
-.content {
-    flex: 1 0 auto;
-}
-
-.footer {
-    flex-shrink: 0;
-}
 
 .fa-ruble-sign {
     font-size: 12px;
     margin-left: 2px;
+}
+
+// POPUPS
+
+.popup {
+    position: fixed;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: rgba(168, 168, 168, 0.66);
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+
+
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: block; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0; /* Add a pointer on hover */
+    transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+// .popup {
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background-color: rgba(168, 168, 168, 0.66);
+//     z-index: 999;
+//     transform: translateY(-110px);
+//     opacity: 0;
+//     pointer-events: none;
+//     transition: opacity 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+// }
+
+// STATUSES
+
+.isHidden {
+    opacity: 0;
+    pointer-events: none
+}
+
+.isShown {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.noCursor {
+    pointer-events: none
+}
+
+.scrollIsBlocked {
+    overflow-y: hidden;
 }

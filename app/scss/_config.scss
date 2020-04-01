@@ -51,7 +51,33 @@ input, textarea {
 	&:required:valid { border-color: green }
 }
 
+button {
+	border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    
+    background: transparent;
+
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
 body {
+    height: 100%;
+    position: relative;
 	font-family: $roboto;
 	font-size: $fontsize;
 	min-width: 320px;
@@ -60,4 +86,42 @@ body {
 	overflow-x: hidden;
 	color: $textcolor;
 	background-color: rgb(156, 156, 156);
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h2 {
+    font-size: 16px;
+    margin: 0;
+
+}
+
+ol,
+ul {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }

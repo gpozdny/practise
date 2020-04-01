@@ -19,7 +19,9 @@
             border-bottom:1px solid black;
         }
         p {
+            padding: 0 20px;
             font-size: 14px;
+            max-width: 400px;
         }
         .fa-wave-square, .fa-think-peaks {
             margin-right: 5px;
@@ -73,7 +75,16 @@
     margin-right: 5px;
 }
 
+.fa-clone {
+    color: red;
+    margin-right: 5px;
+}
+
 // .border-fix {
 //     display: flex;
 //     border-bottom:1px solid black;
 // }
+
+.text-fix {
+    text-align: left;
+}
